@@ -49,3 +49,4 @@ class Company(Base):
     last_enrichment_error = Column(String(500), nullable=True)
 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    enrichment_attempts = Column(Integer, default=0, nullable=False)
